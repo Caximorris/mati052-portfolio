@@ -45,7 +45,7 @@ export function Hero() {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding: '6rem 1.5rem 6rem',
+      padding: 'var(--hero-pt) 1.5rem 6rem',
       maxWidth: '1100px',
       margin: '0 auto',
       position: 'relative',

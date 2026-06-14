@@ -5,7 +5,7 @@ import { SectionHeader } from './SectionHeader'
 export function Projects() {
   return (
     <section id="projects" aria-label="Projects" style={{ padding: '7rem 0', backgroundColor: 'var(--bg)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
-        <SectionHeader number="04" title="What I have built" />
+        <SectionHeader number="05" title="What I have built" />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
           {projects.map((project, index) => (

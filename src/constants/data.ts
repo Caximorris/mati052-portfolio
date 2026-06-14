@@ -6,13 +6,13 @@ export const personalInfo = {
   website: 'mati052.com',
   github: 'https://github.com/Caximorris',
   linkedin: 'https://linkedin.com/in/matias-tamagni',
-  summary: 'Junior Software Engineer and Computer Engineering student with hands-on experience building full-stack applications using TypeScript, Node.js, React and SQL/NoSQL databases.',
+  summary: 'Full-stack developer building production applications with TypeScript, Node.js, and React — currently studying Computer Engineering at UOC.',
 }
 
 export const roles = [
   'Junior Software Engineer',
   'Full-Stack Developer',
-  'TypeScript Enthusiast',
+  'Computer Engineering Student',
   'Node.js Developer',
 ]
 
@@ -80,11 +80,24 @@ export const experience = [
   },
 ]
 
+export const education = [
+  {
+    school: 'UOC — Universitat Oberta de Catalunya',
+    degree: 'Bachelor in Computer Engineering',
+    period: '2024 – Present',
+    location: 'Online, Spain',
+    highlights: [
+      'Relevant coursework: Algorithms, Operating Systems, Databases, Software Engineering, Networks.',
+      'Applying academic concepts directly in professional work at Cuiner.',
+    ],
+  },
+]
+
 export const projects = [
   {
     name: 'Natural Parks',
     url: 'https://naturalparks.onrender.com',
-    github: 'https://github.com/Caximorris',
+    github: 'https://github.com/Caximorris/naturalparks',
     description: 'Full-stack web application with authentication, role-based access, reviews, image uploads, REST APIs and MongoDB integration.',
     stack: ['Node.js', 'Express', 'TypeScript', 'MongoDB'],
     featured: true,
@@ -92,7 +105,7 @@ export const projects = [
   {
     name: 'Personal Portfolio',
     url: 'https://mati052.com',
-    github: 'https://github.com/Caximorris',
+    github: 'https://github.com/Caximorris/mati052-portfolio',
     description: 'Personal portfolio and project showcase built with React, TypeScript and deployed on AWS Amplify.',
     stack: ['React', 'TypeScript', 'AWS Amplify'],
     featured: false,

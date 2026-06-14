@@ -5,7 +5,7 @@ import { SectionHeader } from './SectionHeader'
 export function Contact() {
   return (
   <section id="contact" aria-label="Contact" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
-        <SectionHeader number="05" title="Get in touch" />
+        <SectionHeader number="06" title="Get in touch" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

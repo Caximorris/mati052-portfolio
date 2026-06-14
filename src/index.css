@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 
 :root {
+  --hero-pt: 6rem;
   --teal: #118DA0;
   --teal-light: #E8F6F8;
   --teal-mid: #0E7A8C;
@@ -63,6 +64,7 @@ body {
   .hidden.md\:flex { display: none !important; }
   .hidden.md\:block { display: none !important; }
   html { scroll-padding-top: 104px; }
+  :root { --hero-pt: 8rem; }
 }
 
 @media (min-width: 769px) {
