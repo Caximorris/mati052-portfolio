@@ -9,9 +9,9 @@ const stats = [
   { value: 'UOC', label: 'CS degree' },
 ]
 
-export function About({ dark }: { dark: boolean }) {
+export function About() {
   return (
-    <section id="about" style={{ backgroundColor: 'var(--surface)', padding: '7rem 0' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+    <section id="about" aria-label="About me" style={{ backgroundColor: 'var(--surface)', padding: '7rem 0' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <SectionHeader number="01" title="About me" />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'start' }}>
@@ -41,7 +41,7 @@ export function About({ dark }: { dark: boolean }) {
                   target={link.external ? '_blank' : undefined}
                   rel={link.external ? 'noopener noreferrer' : undefined}
                   style={{ fontFamily: 'var(--font-heading)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--teal)', border: '2px solid var(--teal)', borderRadius: '6px', padding: '7px 16px', textDecoration: 'none', transition: 'all 0.2s' }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--teal)'; (e.currentTarget as HTMLAnchorElement).style.color = '#fff' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--teal)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-on-accent)' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--teal)' }}
                 >
                   {link.label}

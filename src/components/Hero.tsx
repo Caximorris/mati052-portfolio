@@ -38,27 +38,25 @@ function TypewriterText({ texts }: { texts: string[] }) {
   )
 }
 
-export function Hero({ dark }: { dark: boolean }) {
+export function Hero() {
   return (
-    <section id="hero" style={{
+    <section id="hero" aria-label="Introduction" style={{
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding: '6rem 1.5rem 2rem',
+      padding: '6rem 1.5rem 6rem',
       maxWidth: '1100px',
       margin: '0 auto',
       position: 'relative',
     }}>
-      <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
-
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.8rem',
+          fontSize: '1rem',
           color: 'var(--teal)',
           letterSpacing: '0.2em',
           textTransform: 'uppercase',
@@ -109,30 +107,43 @@ export function Hero({ dark }: { dark: boolean }) {
         style={{
           fontFamily: 'var(--font-mono)',
           fontSize: '0.9rem',
-          backgroundColor: '#0F1923',
+          backgroundColor: '#162330',
           borderRadius: '12px',
           padding: '1.5rem 2rem',
           marginBottom: '2.5rem',
           maxWidth: '500px',
           lineHeight: 2,
+          border: '1px solid rgba(255,255,255,0.07)',
           borderLeft: '4px solid var(--red)',
         }}
       >
-        <span style={{ color: '#7C9AB5' }}>const </span>
-        <span style={{ color: '#79C0FF' }}>matias</span>
-        <span style={{ color: '#7C9AB5' }}> = </span>
-        <span style={{ color: 'var(--red)', fontWeight: 600 }}>new </span>
-        <span style={{ color: '#E6BD5A', fontWeight: 600 }}>Engineer</span>
-        <span style={{ color: '#aaa' }}>(</span>
+        <span style={{ color: '#6A8A9F' }}>{'// engineer.ts'}</span>
         <br />
-        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>stack: </span>
-        <span style={{ color: '#7EE787' }}>['TS', 'React', 'Node', 'AWS']</span>
+        <span style={{ color: '#7C9AB5' }}>const </span>
+        <span style={{ color: '#79C0FF' }}>dev</span>
+        <span style={{ color: '#aaa' }}> = {'{'}</span>
+        <br />
+        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>name</span>
+        <span style={{ color: '#aaa' }}>:{'      '}</span>
+        <span style={{ color: '#7EE787' }}>"Matias Tamagni"</span>
         <span style={{ color: '#aaa' }}>,</span>
         <br />
-        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>available: </span>
-        <span style={{ color: 'var(--teal)', fontWeight: 600 }}>true</span>
+        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>focus</span>
+        <span style={{ color: '#aaa' }}>:{'     '}</span>
+        <span style={{ color: '#7EE787' }}>"TypeScript · Node.js · React"</span>
+        <span style={{ color: '#aaa' }}>,</span>
         <br />
-        <span style={{ color: '#aaa' }}>)</span>
+        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>location</span>
+        <span style={{ color: '#aaa' }}>:{'  '}</span>
+        <span style={{ color: '#7EE787' }}>"Mallorca, Spain"</span>
+        <span style={{ color: '#aaa' }}>,</span>
+        <br />
+        <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>available</span>
+        <span style={{ color: '#aaa' }}>: </span>
+        <span style={{ color: 'var(--teal)', fontWeight: 600 }}>true</span>
+        <span style={{ color: '#aaa' }}>,</span>
+        <br />
+        <span style={{ color: '#aaa' }}>{'}'}</span>
       </motion.div>
 
       <motion.div
@@ -146,7 +157,7 @@ export function Hero({ dark }: { dark: boolean }) {
           fontWeight: 600,
           fontSize: '0.95rem',
           backgroundColor: 'var(--teal)',
-          color: '#fff',
+          color: 'var(--text-on-accent)',
           padding: '13px 32px',
           borderRadius: '8px',
           textDecoration: 'none',
@@ -204,20 +215,20 @@ export function Hero({ dark }: { dark: boolean }) {
         transition={{ delay: 1.2 }}
         style={{
           position: 'absolute',
-          bottom: '2.5rem',
+          bottom: '2rem',
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '8px',
+          gap: '10px',
         }}
       >
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>scroll</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-secondary)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          style={{ width: '1px', height: '36px', backgroundColor: 'var(--teal)' }}
+          style={{ width: '2px', height: '40px', backgroundColor: 'var(--teal)' }}
         />
       </motion.div>
     </section>

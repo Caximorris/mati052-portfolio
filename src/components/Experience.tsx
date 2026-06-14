@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import { experience } from '../constants/data'
 import { SectionHeader } from './SectionHeader'
 
-export function Experience({ dark }: { dark: boolean }) {
+export function Experience() {
   return (
-    <section id="experience" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+    <section id="experience" aria-label="Work experience" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <SectionHeader number="03" title="Where I have worked" />
 
         <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

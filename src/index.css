@@ -19,9 +19,12 @@
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'Courier New', monospace;
+  --text-on-accent: #ffffff;
+  --nav-scrolled-bg: rgba(255, 255, 255, 0.95);
 }
 
 [data-theme='dark'] {
+  --nav-scrolled-bg: rgba(15, 25, 35, 0.95);
   --text-primary: #E2E8F0;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
@@ -35,7 +38,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
   background-color: var(--bg);
@@ -49,6 +52,12 @@ body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 @media (max-width: 768px) {
   .hidden.md\:flex { display: none !important; }

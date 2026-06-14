@@ -19,9 +19,9 @@ const item = {
   show: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
 }
 
-export function Skills({ dark }: { dark: boolean }) {
+export function Skills() {
   return (
-    <section id="skills" style={{ padding: '7rem 0', backgroundColor: 'var(--bg)' }}>
+    <section id="skills" aria-label="Skills" style={{ padding: '7rem 0', backgroundColor: 'var(--bg)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <SectionHeader number="02" title="What I work with" />
 

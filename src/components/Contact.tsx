@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import { personalInfo } from '../constants/data'
 import { SectionHeader } from './SectionHeader'
 
-export function Contact({ dark }: { dark: boolean }) {
+export function Contact() {
   return (
-  <section id="contact" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+  <section id="contact" aria-label="Contact" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <SectionHeader number="05" title="Get in touch" />
 
         <motion.div
@@ -20,7 +20,7 @@ export function Contact({ dark }: { dark: boolean }) {
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
             <a href={`mailto:${personalInfo.email}`}
-              style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.95rem', backgroundColor: 'var(--teal)', color: '#fff', padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', transition: 'background-color 0.2s' }}
+              style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.95rem', backgroundColor: 'var(--teal)', color: 'var(--text-on-accent)', padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', transition: 'background-color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--teal-dark)')}
               onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--teal)')}
             >

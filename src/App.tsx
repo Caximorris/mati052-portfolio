@@ -22,14 +22,14 @@ export default function App() {
     <div data-theme={dark ? 'dark' : 'light'}>
       <Navbar dark={dark} onToggleDark={() => setDark(d => !d)} />
       <main>
-        <Hero dark={dark} />
-        <About dark={dark} />
-        <Skills dark={dark} />
-        <Experience dark={dark} />
-        <Projects dark={dark} />
-        <Contact dark={dark} />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
-      <Footer dark={dark} />
+      <Footer />
     </div>
   )
 }
