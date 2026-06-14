@@ -91,6 +91,16 @@ export const education = [
       'Applying academic concepts directly in professional work at Cuiner.',
     ],
   },
+  {
+    school: 'Udemy — Colt Steele',
+    degree: 'The Web Developer Bootcamp',
+    period: '2023',
+    location: 'Online',
+    highlights: [
+      'Full-stack curriculum covering HTML, CSS, JavaScript, Node.js, Express, MongoDB and REST APIs.',
+      'Built multiple projects end-to-end including authentication flows and database-backed applications.',
+    ],
+  },
 ]
 
 export const projects = [
