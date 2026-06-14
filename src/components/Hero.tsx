@@ -115,6 +115,7 @@ export function Hero() {
           lineHeight: 2,
           border: '1px solid rgba(255,255,255,0.07)',
           borderLeft: '4px solid var(--red)',
+          overflowX: 'auto',
         }}
       >
         <span style={{ color: '#6A8A9F' }}>{'// engineer.ts'}</span>
@@ -213,12 +214,12 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
+        className="hidden md:flex"
         style={{
           position: 'absolute',
           bottom: '2rem',
           left: '50%',
           transform: 'translateX(-50%)',
-          display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: '10px',

@@ -50,6 +50,7 @@ export function Navbar({ dark, onToggleDark }: { dark: boolean; onToggleDark: ()
         transition: 'all 0.3s ease',
       }}
     >
+      {/* Main row — logo + desktop links + controls */}
       <div style={{
         maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px',
@@ -58,7 +59,8 @@ export function Navbar({ dark, onToggleDark }: { dark: boolean; onToggleDark: ()
           MT<span style={{ color: 'var(--red)' }}>.</span>
         </a>
 
-        <ul role="list" style={{ display: 'flex', gap: '2rem', listStyle: 'none', alignItems: 'center', margin: '0 2rem' }}>
+        {/* Desktop links */}
+        <ul role="list" className="hidden md:flex" style={{ display: 'flex', gap: '2rem', listStyle: 'none', alignItems: 'center', margin: '0 2rem' }}>
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.slice(1)
             return (
@@ -80,13 +82,9 @@ export function Navbar({ dark, onToggleDark }: { dark: boolean; onToggleDark: ()
                 </a>
                 {isActive && (
                   <span style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: '50%',
+                    position: 'absolute', bottom: 0, left: '50%',
                     transform: 'translateX(-50%)',
-                    width: '4px',
-                    height: '4px',
-                    borderRadius: '50%',
+                    width: '4px', height: '4px', borderRadius: '50%',
                     backgroundColor: 'var(--teal)',
                   }} />
                 )}
@@ -112,6 +110,7 @@ export function Navbar({ dark, onToggleDark }: { dark: boolean; onToggleDark: ()
           </button>
 
           <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
+            className="hidden md:block"
             style={{ fontFamily: 'var(--font-heading)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--teal)', border: '1.5px solid var(--teal)', borderRadius: '8px', padding: '6px 16px', textDecoration: 'none', transition: 'all 0.2s' }}
             onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--teal)'; e.currentTarget.style.color = 'var(--text-on-accent)' }}
             onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--teal)' }}
@@ -119,6 +118,44 @@ export function Navbar({ dark, onToggleDark }: { dark: boolean; onToggleDark: ()
             LinkedIn ↗
           </a>
         </div>
+      </div>
+
+      {/* Mobile links strip — scrollable, hidden on desktop */}
+      <div
+        className="nav-mobile-strip md:hidden"
+        style={{
+          display: 'flex',
+          overflowX: 'auto',
+          gap: '1.75rem',
+          padding: '0.5rem 1.5rem 0.625rem',
+          borderTop: '1px solid var(--border)',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        } as React.CSSProperties}
+      >
+        {navLinks.map((link) => {
+          const isActive = activeSection === link.href.slice(1)
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '0.8rem',
+                fontWeight: isActive ? 600 : 500,
+                color: isActive ? 'var(--teal)' : 'var(--text-secondary)',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+                paddingBottom: '2px',
+                borderBottom: isActive ? '2px solid var(--teal)' : '2px solid transparent',
+                transition: 'color 0.2s, border-color 0.2s',
+              }}
+            >
+              {link.label}
+            </a>
+          )
+        })}
       </div>
     </motion.nav>
   )
