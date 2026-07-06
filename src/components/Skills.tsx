@@ -2,11 +2,12 @@ import { motion } from 'framer-motion'
 import { SectionHeader } from './SectionHeader'
 
 const skillGroups = [
-  { category: 'Languages', skills: ['TypeScript', 'JavaScript', 'SQL', 'Visual Basic'] },
-  { category: 'Backend', skills: ['Node.js', 'Express', 'NestJS', 'REST APIs', 'Authentication', 'API Integration'] },
-  { category: 'Frontend', skills: ['React', 'HTML', 'CSS', 'Responsive Design'] },
+  { category: 'Languages', skills: ['TypeScript', 'JavaScript', 'C#', 'Python', 'SQL', 'Visual Basic'] },
+  { category: 'Backend', skills: ['Node.js', 'Express', 'ASP.NET Core', 'REST API Design', 'JWT Authentication', 'Entity Framework Core', 'SignalR'] },
+  { category: 'Frontend', skills: ['React', 'Blazor WebAssembly', 'HTML', 'CSS', 'Tailwind CSS', 'Responsive Design'] },
   { category: 'Databases', skills: ['PostgreSQL', 'MongoDB'] },
-  { category: 'Cloud & Tools', skills: ['Docker', 'AWS', 'Git', 'GitHub', 'Render', 'AWS Amplify'] },
+  { category: 'Cloud & DevOps', skills: ['Docker', 'AWS', 'AWS Amplify', 'GitHub Actions', 'Git', 'Render', 'Railway', 'Azure Static Web Apps'] },
+  { category: 'Practices', skills: ['Agile', 'Scrum', 'Unit Testing', 'CI/CD', 'Code Review', 'Technical Documentation'] },
 ]
 
 const container = {

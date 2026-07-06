@@ -4,7 +4,7 @@ import { SectionHeader } from './SectionHeader'
 
 const stats = [
   { value: '4+', label: 'Years in tech' },
-  { value: '2', label: 'Live projects' },
+  { value: '4', label: 'Projects built' },
   { value: 'AWS', label: 'Cloud deploy' },
   { value: 'UOC', label: 'CS degree' },
 ]

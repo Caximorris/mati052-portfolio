@@ -131,7 +131,7 @@ export function Hero() {
         <br />
         <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>focus</span>
         <span style={{ color: '#aaa' }}>:{'     '}</span>
-        <span style={{ color: '#7EE787' }}>"TypeScript · Node.js · React"</span>
+        <span style={{ color: '#7EE787' }}>"TypeScript/Node.js · C#/.NET"</span>
         <span style={{ color: '#aaa' }}>,</span>
         <br />
         <span style={{ color: '#7C9AB5', paddingLeft: '1.5rem' }}>location</span>

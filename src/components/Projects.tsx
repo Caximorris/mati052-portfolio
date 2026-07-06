@@ -4,10 +4,10 @@ import { SectionHeader } from './SectionHeader'
 
 export function Projects() {
   return (
-    <section id="projects" aria-label="Projects" style={{ padding: '7rem 0', backgroundColor: 'var(--bg)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+    <section id="projects" aria-label="Projects" style={{ padding: '7rem 0', backgroundColor: 'var(--surface)' }}>      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <SectionHeader number="05" title="What I have built" />
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: '1.75rem' }}>
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -28,9 +28,14 @@ export function Projects() {
               whileHover={{ y: -6, borderColor: 'var(--teal)', boxShadow: '0 8px 30px rgba(17,141,160,0.1)' } as never}
             >
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem' }}>
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--text-primary)' }}>
-                  {project.name}
-                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--text-primary)', lineHeight: 1.2 }}>
+                    {project.name}
+                  </h3>
+                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--teal)', letterSpacing: '0.02em' }}>
+                    {project.subtitle}
+                  </p>
+                </div>
                 {project.featured && (
                   <span style={{
                     fontFamily: 'var(--font-mono)', fontSize: '0.7rem', fontWeight: 700,
@@ -43,9 +48,14 @@ export function Projects() {
                 )}
               </div>
 
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.75, flex: 1 }}>
-                {project.description}
-              </p>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', listStyle: 'none', flex: 1 }}>
+                {project.bullets.map((bullet) => (
+                  <li key={bullet} style={{ display: 'flex', gap: '0.7rem', fontFamily: 'var(--font-body)', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
+                    <span style={{ color: 'var(--red)', flexShrink: 0, marginTop: '3px', fontSize: '0.7rem' }}>▶</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {project.stack.map((tech) => (
@@ -67,13 +77,15 @@ export function Projects() {
                 >
                   GitHub ↗
                 </a>
-                <a href={project.url} target="_blank" rel="noopener noreferrer"
-                  style={{ fontFamily: 'var(--font-heading)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', transition: 'color 0.2s' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = 'var(--teal-dark)')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'var(--teal)')}
-                >
-                  Live demo ↗
-                </a>
+                {'url' in project && project.url && (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer"
+                    style={{ fontFamily: 'var(--font-heading)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', transition: 'color 0.2s' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = 'var(--teal-dark)')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'var(--teal)')}
+                  >
+                    Live demo ↗
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
