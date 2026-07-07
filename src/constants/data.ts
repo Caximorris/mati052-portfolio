@@ -131,7 +131,7 @@ export const projects = [
     bullets: [
       'Full-stack SaaS task manager built with ASP.NET Core 10 Web API, Blazor WebAssembly, PostgreSQL and Entity Framework Core.',
       'JWT authentication, role-based access control and real-time board updates via SignalR, with unit tests covering core domain logic.',
-      'Deployed via GitHub Actions CI/CD — backend on Railway, frontend on Azure Static Web Apps, database on Neon.',
+      'Deployed via GitHub Actions CI/CD — backend on Azure Container Apps, frontend on Azure Static Web Apps, database on Neon.',
     ],
     stack: ['ASP.NET Core', 'Blazor', 'PostgreSQL', 'SignalR', 'EF Core'],
     featured: true,
