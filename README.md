@@ -51,7 +51,7 @@ Dark/light mode is toggled via a `data-theme` attribute on `<html>`. All colors 
 
 ## Deployment
 
-Deployed on **AWS Amplify** with automatic CI/CD from the `main` branch.
+Deployed on **Azure** with automatic CI/CD from the `main` branch.
 
 - Build command: `pnpm build`
 - Output directory: `dist`
